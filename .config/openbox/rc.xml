@@ -283,6 +283,30 @@
         </finalactions>
       </action>
     </keybind>
+    <keybind key="A-d">
+      <action name="Execute">
+        <name>dmenu</name>
+        <command>dmenu_run</command>
+      </action>
+    </keybind>
+    <keybind key="A-a">
+      <action name="Execute">
+        <name>Alacritty</name>
+        <command>alacritty</command>
+      </action>
+    </keybind>
+    <keybind key="A-f">
+      <action name="Execute">
+        <name>Firefox</name>
+        <command>firefox</command>
+      </action>
+    </keybind>
+    <keybind key="A-c">
+      <action name="Execute">
+        <name>Chromium</name>
+        <command>chromium</command>
+      </action>
+    </keybind>
     <keybind key="C-A-Tab">
       <action name="NextWindow">
         <panels>yes</panels>
