@@ -18,3 +18,4 @@ alias rm='rm -i'
 # bare git repo alias for dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
+starship init fish | source
