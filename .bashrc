@@ -5,14 +5,14 @@
 # Some applications read the EDITOR variable to determine your favourite text
 # editor. So uncomment the line below and enter the editor of your choice :-)
 export EDITOR=/usr/bin/vim
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
 
 test -s ~/.alias && . ~/.alias || true
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='\n\[\e[1;37m\]|-- \[\e[1;32m\]\u\[\e[0;39m\]@\[\e[1;36m\]\h\[\e[0;39m\]:\[\e[1;33m\]\w\[\e[0;39m\]\[\e[1;35m\]$\[\e[0;39m\] \[\e[1;37m\]--|\[\e[0;39m\]\n\$ '
+# PS1='\n\[\e[1;37m\]|-- \[\e[1;32m\]\u\[\e[0;39m\]@\[\e[1;36m\]\h\[\e[0;39m\]:\[\e[1;33m\]\w\[\e[0;39m\]\[\e[1;35m\]$\[\e[0;39m\] \[\e[1;37m\]--|\[\e[0;39m\]\n\$ '
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
@@ -73,3 +73,4 @@ alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 # bare git repo alias for dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
+eval "$(starship init bash)"
