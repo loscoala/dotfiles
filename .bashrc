@@ -5,7 +5,7 @@
 # Some applications read the EDITOR variable to determine your favourite text
 # editor. So uncomment the line below and enter the editor of your choice :-)
 export EDITOR=/usr/bin/vim
-export PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
+export PATH=$HOME/.local/bin:$PATH:/usr/local/go/bin
 
 test -s ~/.alias && . ~/.alias || true
 
