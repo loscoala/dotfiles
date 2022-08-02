@@ -84,7 +84,7 @@ fcd ()
 
 fvim ()
 {
-  vim "$(fzf)"
+  nvim "$(fzf)"
 }
 
 eval "$(starship init bash)"
