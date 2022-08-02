@@ -5,7 +5,7 @@
 # Some applications read the EDITOR variable to determine your favourite text
 # editor. So uncomment the line below and enter the editor of your choice :-)
 export EDITOR=/usr/bin/vim
-export PATH=$HOME/bin:$HOME/.local/bin:$PATH:/usr/local/go/bin
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH:/usr/local/go/bin:$HOME/go/bin
 . "$HOME/.cargo/env"
 
 test -s ~/.alias && . ~/.alias || true
@@ -74,12 +74,12 @@ alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 # bare git repo alias for dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND="fd --type f . $HOME"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 fcd ()
 {
-  cd "$(fd --type d --full-path $HOME | fzf)"
+  cd "$(fd --type d . $HOME | fzf)"
 }
 
 fvim ()
